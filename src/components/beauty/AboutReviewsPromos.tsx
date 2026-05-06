@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
-import { Section, SectionLabel, GALLERY_IMG_2, reviews, promos, specialists } from "./SectionPrimitives";
+import { Section, SectionLabel, SVETLANA_PHOTO, reviews, promos } from "./SectionPrimitives";
 
 interface AboutReviewsPromosProps {
   scrollTo: (id: string) => void;
@@ -16,10 +16,10 @@ export default function AboutReviewsPromos({ scrollTo }: AboutReviewsPromosProps
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <Section>
             <div className="relative">
-              <img src={GALLERY_IMG_2} alt="Мастер" className="w-full object-cover" style={{ aspectRatio: "3/4", filter: "saturate(0.88)" }} />
+              <img src={SVETLANA_PHOTO} alt="Климова Светлана" className="w-full object-cover" style={{ aspectRatio: "3/4", objectPosition: "top", filter: "saturate(0.92)" }} />
               <div className="absolute -bottom-6 -right-6 p-8 w-52"
                 style={{ background: "#fff", border: "1px solid rgba(155,91,110,0.18)", boxShadow: "0 8px 32px rgba(44,36,32,0.08)" }}>
-                <div className="font-display text-5xl font-light" style={{ color: "var(--rose)" }}>8</div>
+                <div className="font-display text-5xl font-light" style={{ color: "var(--rose)" }}>20+</div>
                 <div className="font-body text-xs tracking-widest uppercase mt-1" style={{ color: "var(--ink-muted)" }}>лет опыта</div>
               </div>
             </div>
@@ -27,62 +27,25 @@ export default function AboutReviewsPromos({ scrollTo }: AboutReviewsPromosProps
           <Section>
             <SectionLabel>Обо мне</SectionLabel>
             <h2 className="font-display text-5xl font-light mb-6" style={{ letterSpacing: "-0.02em", color: "var(--ink)" }}>
-              Климова Светлана —<br /><em className="italic" style={{ color: "var(--rose)" }}>мастер своего дела</em>
+              Климова Светлана —<br /><em className="italic" style={{ color: "var(--rose)" }}>косметолог</em>
             </h2>
             <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "var(--ink-muted)" }}>
-              Я верю, что каждая женщина прекрасна. Моя задача — не изменить вас, а раскрыть вашу индивидуальность. За 8 лет работы я помогла более чем 200 клиентам обрести уверенность в себе.
+              Я верю, что каждая женщина прекрасна. Моя задача — не изменить вас, а раскрыть вашу индивидуальность. За более чем 20 лет практики я помогла более тысячи клиенток обрести уверенность в себе и полюбить своё отражение.
             </p>
             <p className="font-body text-sm leading-relaxed mb-10" style={{ color: "var(--ink-muted)" }}>
-              Использую только сертифицированные материалы класса премиум. Постоянно повышаю квалификацию на международных мастер-классах.
+              Все процедуры выполняю лично — от консультации до финального результата. Использую только сертифицированные материалы класса премиум и постоянно повышаю квалификацию.
             </p>
             <div className="grid grid-cols-2 gap-4 mb-10">
-              {[["Международные сертификаты", "5+"], ["Обученных мастеров", "12"], ["Повторных клиентов", "94%"], ["Работ в портфолио", "500+"]].map(([label, val]) => (
+              {[["Международные сертификаты", "5+"], ["Довольных клиентов", "1000+"], ["Повторных визитов", "94%"], ["Работ в портфолио", "500+"]].map(([label, val]) => (
                 <div key={label} className="cert-card">
                   <div className="font-display text-3xl font-light" style={{ color: "var(--rose)" }}>{val}</div>
                   <div className="font-body text-xs leading-snug mt-1" style={{ color: "var(--ink-muted)" }}>{label}</div>
                 </div>
               ))}
             </div>
-            <button className="btn-gold" onClick={() => scrollTo("booking")}>Записаться к Светлане</button>
+            <button className="btn-gold" onClick={() => scrollTo("booking")}>Записаться ко мне</button>
           </Section>
         </div>
-
-        {/* SPECIALISTS */}
-        <Section>
-          <div className="mt-24">
-            <div className="text-center mb-12">
-              <SectionLabel>Команда</SectionLabel>
-              <h2 className="font-display text-4xl font-light" style={{ letterSpacing: "-0.02em", color: "var(--ink)" }}>
-                Наши <em className="italic" style={{ color: "var(--rose)" }}>специалисты</em>
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {specialists.map((sp, i) => (
-                <div key={i} className="cert-card">
-                  <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ background: "var(--rose-pale)", border: "1px solid rgba(155,91,110,0.2)" }}>
-                      <Icon name="User" size={22} style={{ color: "var(--rose)" }} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-display text-2xl font-light" style={{ color: "var(--ink)" }}>{sp.name}</h3>
-                      <p className="font-body text-xs tracking-wider uppercase mt-1 mb-1" style={{ color: "var(--rose)" }}>{sp.role}</p>
-                      <p className="font-body text-xs" style={{ color: "var(--ink-muted)" }}>{sp.exp}</p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {sp.certs.map(c => (
-                          <span key={c} className="font-body text-[10px] tracking-wider uppercase px-3 py-1"
-                            style={{ border: "1px solid rgba(155,91,110,0.2)", color: "var(--rose)" }}>
-                            {c}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
       </section>
 
       <div className="divider-gold mx-6" />

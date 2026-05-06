@@ -1,5 +1,5 @@
 import Icon from "@/components/ui/icon";
-import { Section, SectionLabel, HERO_IMG, GALLERY_IMG_1, GALLERY_IMG_2, services, gallery } from "./SectionPrimitives";
+import { Section, SectionLabel, HERO_IMG, GALLERY_IMG_1, GALLERY_IMG_2, SVETLANA_PHOTO, services, gallery } from "./SectionPrimitives";
 import { useState } from "react";
 
 const galleryCategories = ["Все", "Макияж", "Уход", "Перманентный макияж", "Интерьер"];
@@ -52,7 +52,7 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
               className="font-body leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.45s", fontSize: "0.95rem", color: "var(--ink-muted)", maxWidth: "420px", marginBottom: "40px" }}
             >
-              Создаём образы, которые отражают вашу уникальность. Профессиональный уход, точные техники, безупречный результат.
+              Я — Светлана Климова, косметолог с опытом более 20 лет. Помогаю каждой клиентке раскрыть свою природную красоту. Профессиональный уход, точные техники, безупречный результат.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.55s" }}>
@@ -62,7 +62,7 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
 
             {/* Stats */}
             <div className="flex items-center gap-10 mt-14 animate-fade-in" style={{ animationDelay: "0.7s" }}>
-              {[["200+", "Клиентов"], ["8", "Лет опыта"], ["5.0", "Рейтинг"]].map(([num, label]) => (
+              {[["1000+", "Клиентов"], ["20+", "Лет опыта"], ["5.0", "Рейтинг"]].map(([num, label]) => (
                 <div key={label}>
                   <div className="font-display text-3xl font-light" style={{ color: "var(--rose)" }}>{num}</div>
                   <div className="font-body text-[10px] tracking-[0.2em] uppercase mt-1" style={{ color: "var(--ink-muted)" }}>{label}</div>
@@ -77,10 +77,10 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
               {/* Main photo */}
               <div style={{ borderRadius: "60% 40% 55% 45% / 50% 55% 45% 50%", overflow: "hidden", aspectRatio: "4/5" }}>
                 <img
-                  src={HERO_IMG}
-                  alt="Студия Штриха"
+                  src={SVETLANA_PHOTO}
+                  alt="Климова Светлана"
                   className="w-full h-full object-cover"
-                  style={{ filter: "saturate(0.9) brightness(1.02)" }}
+                  style={{ filter: "saturate(0.95) brightness(1.02)", objectPosition: "top" }}
                 />
               </div>
               {/* Floating badge */}
@@ -97,7 +97,7 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
                   minWidth: "130px",
                 }}
               >
-                <div className="font-display text-4xl font-light" style={{ color: "var(--rose)", lineHeight: 1 }}>8</div>
+                <div className="font-display text-4xl font-light" style={{ color: "var(--rose)", lineHeight: 1 }}>20+</div>
                 <div className="text-[10px] tracking-widest uppercase mt-1" style={{ color: "var(--ink-muted)" }}>лет опыта</div>
               </div>
               {/* Accent dot */}
