@@ -26,27 +26,12 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center min-h-screen pt-28 pb-16 gap-12">
           {/* Left: text */}
           <div className="flex-1 z-10">
-            <div className="flex items-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <span className="gold-line" style={{ width: "50px" }} />
-              <span className="font-body text-[10px] tracking-[0.35em] uppercase" style={{ color: "var(--rose)" }}>
-                Премиум бьюти-студия
-              </span>
-            </div>
-
-            <h1
-              className="font-display font-light leading-none mb-6 animate-fade-in"
-              style={{ animationDelay: "0.25s", fontSize: "clamp(3rem, 7vw, 6rem)", letterSpacing: "-0.02em", color: "var(--ink)" }}
-            >
-              Студия<br />
-              <em className="italic" style={{ color: "var(--rose)" }}>Штриха</em>
-            </h1>
-
-            <p
-              className="font-display italic animate-fade-in"
-              style={{ animationDelay: "0.35s", fontSize: "1.15rem", color: "var(--rose-light)", marginBottom: "8px" }}
-            >
-              Климовой Светланы
-            </p>
+            <img
+              src="https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/5361531c-26fb-44e3-a483-122c3ba4b5ad.jpg"
+              alt="Klimova Svetlana"
+              className="animate-fade-in"
+              style={{ height: "180px", width: "auto", objectFit: "contain", marginBottom: "32px", animationDelay: "0.1s" }}
+            />
 
             <p
               className="font-body leading-relaxed animate-fade-in"
