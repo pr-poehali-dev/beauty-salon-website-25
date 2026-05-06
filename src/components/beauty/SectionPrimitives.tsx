@@ -14,12 +14,11 @@ export const services = [
 ];
 
 export const gallery = [
-  { img: GALLERY_IMG_1, label: "Трансформация", category: "Макияж" },
-  { img: GALLERY_IMG_2, label: "Работа мастера", category: "Уход" },
-  { img: HERO_IMG, label: "Студия", category: "Интерьер" },
-  { img: GALLERY_IMG_1, label: "Вечерний образ", category: "Макияж" },
-  { img: GALLERY_IMG_2, label: "Перманент", category: "Перманентный макияж" },
-  { img: HERO_IMG, label: "Детали", category: "Уход" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/744c2038-6ad8-458c-aaa4-60d2c291c914.jpg", label: "Перманентный макияж стрелок", category: "Перманентный макияж" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/40ba8639-223d-4cbd-a0bb-1ba82710f67b.jpg", label: "До и после — ресницы", category: "Наращивание ресниц" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/76506788-ecb5-444a-bcea-aa1ec0c417c5.jpg", label: "Перманентный макияж губ", category: "Перманентный макияж" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/63fe3c1f-9f63-453e-8722-dc5b21c27344.jpg", label: "Перманентный макияж губ", category: "Перманентный макияж" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/74ac9098-1cdb-4905-859e-2c174bf780ec.jpg", label: "Наращивание ресниц", category: "Наращивание ресниц" },
 ];
 
 export const reviews = [

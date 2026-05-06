@@ -1,8 +1,8 @@
 import Icon from "@/components/ui/icon";
-import { Section, SectionLabel, HERO_IMG, GALLERY_IMG_1, GALLERY_IMG_2, SVETLANA_PHOTO, services, gallery } from "./SectionPrimitives";
+import { Section, SectionLabel, SVETLANA_PHOTO, services, gallery } from "./SectionPrimitives";
 import { useState } from "react";
 
-const galleryCategories = ["Все", "Макияж", "Уход", "Перманентный макияж", "Интерьер"];
+const galleryCategories = ["Все", "Перманентный макияж", "Наращивание ресниц"];
 
 interface HeroServicesProps {
   scrollTo: (id: string) => void;
