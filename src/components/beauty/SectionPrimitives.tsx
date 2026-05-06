@@ -6,14 +6,15 @@ export const GALLERY_IMG_2 = "https://cdn.poehali.dev/projects/5666d866-7f12-4a6
 
 export const services = [
   { icon: "Zap", title: "Перманентный макияж", desc: "Татуаж бровей, стрелок и губ. Естественный результат, который держится годами.", price: "от 8 000 ₽" },
-  { icon: "Leaf", title: "Косметология", desc: "Чистки, пилинги, мезотерапия, биоревитализация. Подбираю протоколы индивидуально.", price: "от 3 500 ₽" },
-  { icon: "Droplets", title: "Брови", desc: "Коррекция, окрашивание, ламинирование. Выстраиваю архитектуру бровей по вашим чертам лица.", price: "от 1 800 ₽" },
+  { icon: "Leaf", title: "Косметология", desc: "Чистки, пилинги, мезотерапия, биоревитализация, ботокс. Подбираю протоколы индивидуально.", price: "от 3 500 ₽" },
 ];
 
 export const gallery = [
   { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/744c2038-6ad8-458c-aaa4-60d2c291c914.jpg", label: "Перманентный макияж стрелок", category: "Перманентный макияж" },
   { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/76506788-ecb5-444a-bcea-aa1ec0c417c5.jpg", label: "Перманентный макияж губ", category: "Перманентный макияж" },
   { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/63fe3c1f-9f63-453e-8722-dc5b21c27344.jpg", label: "Перманентный макияж губ", category: "Перманентный макияж" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/40ba8639-223d-4cbd-a0bb-1ba82710f67b.jpg", label: "До и после", category: "Косметология" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/74ac9098-1cdb-4905-859e-2c174bf780ec.jpg", label: "До и после", category: "Косметология" },
 ];
 
 export const reviews = [

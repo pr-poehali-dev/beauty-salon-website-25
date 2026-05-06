@@ -2,7 +2,7 @@ import Icon from "@/components/ui/icon";
 import { Section, SectionLabel, SVETLANA_PHOTO, services, gallery } from "./SectionPrimitives";
 import { useState } from "react";
 
-const galleryCategories = ["Все", "Перманентный макияж", "Наращивание ресниц"];
+const galleryCategories = ["Все", "Перманентный макияж", "Косметология"];
 
 interface HeroServicesProps {
   scrollTo: (id: string) => void;
