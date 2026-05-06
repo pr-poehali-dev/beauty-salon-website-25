@@ -102,7 +102,7 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
           <div className="flex-1 z-10 w-full lg:max-w-[520px] animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="relative">
               {/* Main photo */}
-              <div style={{ borderRadius: "60% 40% 55% 45% / 50% 55% 45% 50%", overflow: "hidden", aspectRatio: "4/5" }}>
+              <div style={{ overflow: "hidden", aspectRatio: "4/5" }}>
                 <img
                   src={SVETLANA_PHOTO}
                   alt="Климова Светлана"

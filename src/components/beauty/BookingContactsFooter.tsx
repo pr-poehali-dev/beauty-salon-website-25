@@ -143,21 +143,23 @@ export default function BookingContactsFooter({ scrollTo }: BookingContactsFoote
             </h2>
           </div>
         </Section>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
             { icon: "MapPin", title: "Адрес", lines: ["МО, г. Видное", "пр-т Ленинского Комсомола, 9/3", "ТЦ МАК"] },
             { icon: "Clock", title: "Часы работы", lines: ["Пн–Пт: 10:00 – 20:00", "Сб–Вс: 10:00 – 18:00"] },
             { icon: "Phone", title: "Телефон", lines: ["+7 (966) 190-37-71"] },
+            { icon: "Send", title: "Telegram", lines: ["Написать в Telegram"], href: "https://t.me/+79661903771" },
           ].map((c, i) => (
             <Section key={i}>
-              <div className="cert-card text-center">
+              <div className="cert-card text-center" style={{ cursor: c.href ? "pointer" : "default" }}
+                onClick={() => c.href && window.open(c.href, "_blank")}>
                 <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
                   style={{ background: "var(--rose-pale)", border: "1px solid rgba(155,91,110,0.2)" }}>
                   <Icon name={c.icon} size={20} style={{ color: "var(--rose)" }} />
                 </div>
                 <h3 className="font-display text-xl font-light mb-3" style={{ color: "var(--ink)" }}>{c.title}</h3>
                 {c.lines.map((line, j) => (
-                  <p key={j} className="font-body text-sm" style={{ color: "var(--ink-muted)" }}>{line}</p>
+                  <p key={j} className="font-body text-sm" style={{ color: c.href ? "var(--rose)" : "var(--ink-muted)" }}>{line}</p>
                 ))}
               </div>
             </Section>
