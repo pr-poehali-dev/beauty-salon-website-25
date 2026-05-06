@@ -17,39 +17,114 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
 
   return (
     <>
-      {/* HERO */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={HERO_IMG} alt="Studio" className="w-full h-full object-cover" style={{ filter: "brightness(0.22) saturate(0.7)" }} />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(13,13,13,0.2) 0%, rgba(13,13,13,0.5) 60%, var(--dark) 100%)" }} />
-        </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <span className="gold-line" style={{ width: "80px" }} />
-            <span className="text-[11px] tracking-[0.4em] uppercase text-gold font-body">Премиум бьюти-студия</span>
-            <span className="gold-line" style={{ width: "80px" }} />
+      {/* HERO — split layout: text left, image right */}
+      <section id="hero" className="relative overflow-hidden" style={{ background: "var(--cream)", minHeight: "100vh" }}>
+        {/* Decorative petal blobs */}
+        <div className="hero-petal" style={{ width: 520, height: 520, top: -80, right: -100, opacity: 0.7 }} />
+        <div className="hero-petal" style={{ width: 300, height: 300, bottom: 60, left: -60, opacity: 0.5, borderRadius: "40% 60% 30% 70% / 60% 40% 70% 30%" }} />
+
+        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center min-h-screen pt-28 pb-16 gap-12">
+          {/* Left: text */}
+          <div className="flex-1 z-10">
+            <div className="flex items-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <span className="gold-line" style={{ width: "50px" }} />
+              <span className="font-body text-[10px] tracking-[0.35em] uppercase" style={{ color: "var(--rose)" }}>
+                Премиум бьюти-студия
+              </span>
+            </div>
+
+            <h1
+              className="font-display font-light leading-none mb-6 animate-fade-in"
+              style={{ animationDelay: "0.25s", fontSize: "clamp(3rem, 7vw, 6rem)", letterSpacing: "-0.02em", color: "var(--ink)" }}
+            >
+              Студия<br />
+              <em className="italic" style={{ color: "var(--rose)" }}>Штриха</em>
+            </h1>
+
+            <p
+              className="font-display italic animate-fade-in"
+              style={{ animationDelay: "0.35s", fontSize: "1.15rem", color: "var(--rose-light)", marginBottom: "8px" }}
+            >
+              Климовой Светланы
+            </p>
+
+            <p
+              className="font-body leading-relaxed animate-fade-in"
+              style={{ animationDelay: "0.45s", fontSize: "0.95rem", color: "var(--ink-muted)", maxWidth: "420px", marginBottom: "40px" }}
+            >
+              Создаём образы, которые отражают вашу уникальность. Профессиональный уход, точные техники, безупречный результат.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.55s" }}>
+              <button className="btn-gold" onClick={() => scrollTo("booking")}>Записаться онлайн</button>
+              <button className="btn-outline-gold" onClick={() => scrollTo("portfolio")}>Смотреть работы</button>
+            </div>
+
+            {/* Stats */}
+            <div className="flex items-center gap-10 mt-14 animate-fade-in" style={{ animationDelay: "0.7s" }}>
+              {[["200+", "Клиентов"], ["8", "Лет опыта"], ["5.0", "Рейтинг"]].map(([num, label]) => (
+                <div key={label}>
+                  <div className="font-display text-3xl font-light" style={{ color: "var(--rose)" }}>{num}</div>
+                  <div className="font-body text-[10px] tracking-[0.2em] uppercase mt-1" style={{ color: "var(--ink-muted)" }}>{label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-          <h1 className="font-display text-6xl md:text-8xl lg:text-[96px] font-light leading-none mb-6 animate-fade-in" style={{ animationDelay: "0.4s", letterSpacing: "-0.02em" }}>
-            Искусство<br /><em className="italic" style={{ color: "var(--gold)" }}>красоты</em>
-          </h1>
-          <p className="font-body text-base md:text-lg opacity-60 max-w-lg mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            Создаём образы, которые отражают вашу уникальность. Профессиональный уход, точные техники, безупречный результат.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.8s" }}>
-            <button className="btn-gold" onClick={() => scrollTo("booking")}>Записаться онлайн</button>
-            <button className="btn-outline-gold" onClick={() => scrollTo("portfolio")}>Смотреть работы</button>
-          </div>
-          <div className="flex items-center justify-center gap-10 mt-16 animate-fade-in" style={{ animationDelay: "1s" }}>
-            {[["200+", "Клиентов"], ["8", "Лет опыта"], ["5.0", "Рейтинг"]].map(([num, label]) => (
-              <div key={label} className="text-center">
-                <div className="font-display text-3xl font-light" style={{ color: "var(--gold)" }}>{num}</div>
-                <div className="text-[11px] tracking-[0.2em] uppercase opacity-50 font-body mt-1">{label}</div>
+
+          {/* Right: image */}
+          <div className="flex-1 z-10 w-full lg:max-w-[520px] animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <div className="relative">
+              {/* Main photo */}
+              <div style={{ borderRadius: "60% 40% 55% 45% / 50% 55% 45% 50%", overflow: "hidden", aspectRatio: "4/5" }}>
+                <img
+                  src={HERO_IMG}
+                  alt="Студия Штриха"
+                  className="w-full h-full object-cover"
+                  style={{ filter: "saturate(0.9) brightness(1.02)" }}
+                />
               </div>
-            ))}
+              {/* Floating badge */}
+              <div
+                className="absolute font-body text-center"
+                style={{
+                  bottom: "32px",
+                  left: "-24px",
+                  background: "#fff",
+                  border: "1px solid rgba(155,91,110,0.2)",
+                  boxShadow: "0 8px 32px rgba(44,36,32,0.1)",
+                  borderRadius: "2px",
+                  padding: "18px 24px",
+                  minWidth: "130px",
+                }}
+              >
+                <div className="font-display text-4xl font-light" style={{ color: "var(--rose)", lineHeight: 1 }}>8</div>
+                <div className="text-[10px] tracking-widest uppercase mt-1" style={{ color: "var(--ink-muted)" }}>лет опыта</div>
+              </div>
+              {/* Accent dot */}
+              <div
+                className="absolute"
+                style={{
+                  top: "24px",
+                  right: "-16px",
+                  width: "56px",
+                  height: "56px",
+                  borderRadius: "50%",
+                  background: "var(--rose-pale)",
+                  border: "2px solid rgba(155,91,110,0.2)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Icon name="Star" size={18} style={{ color: "var(--rose)" }} />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator opacity-40">
-          <Icon name="ChevronDown" size={20} className="text-gold" />
+
+        {/* Scroll cue */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator" style={{ opacity: 0.4 }}>
+          <Icon name="ChevronDown" size={20} style={{ color: "var(--rose)" }} />
         </div>
       </section>
 
@@ -58,8 +133,9 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
         <Section>
           <div className="text-center mb-16">
             <SectionLabel>Наши услуги</SectionLabel>
-            <h2 className="font-display text-5xl md:text-6xl font-light" style={{ letterSpacing: "-0.02em" }}>
-              Каждая процедура —<br /><em className="italic" style={{ color: "var(--gold)" }}>произведение искусства</em>
+            <h2 className="font-display text-5xl md:text-6xl font-light" style={{ letterSpacing: "-0.02em", color: "var(--ink)" }}>
+              Каждая процедура —<br />
+              <em className="italic" style={{ color: "var(--rose)" }}>произведение искусства</em>
             </h2>
           </div>
         </Section>
@@ -67,15 +143,21 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
           {services.map((s, i) => (
             <Section key={s.title}>
               <div className="card-dark p-8 h-full flex flex-col" style={{ transitionDelay: `${i * 0.08}s` }}>
-                <div className="w-10 h-10 rounded-full flex items-center justify-center mb-6"
-                  style={{ background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.2)" }}>
-                  <Icon name={s.icon} size={18} className="text-gold" />
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center mb-6"
+                  style={{ background: "var(--rose-pale)", border: "1px solid rgba(155,91,110,0.2)" }}
+                >
+                  <Icon name={s.icon} size={18} style={{ color: "var(--rose)" }} />
                 </div>
-                <h3 className="font-display text-2xl font-light mb-3">{s.title}</h3>
-                <p className="font-body text-sm opacity-50 leading-relaxed flex-1">{s.desc}</p>
+                <h3 className="font-display text-2xl font-light mb-3" style={{ color: "var(--ink)" }}>{s.title}</h3>
+                <p className="font-body text-sm leading-relaxed flex-1" style={{ color: "var(--ink-muted)" }}>{s.desc}</p>
                 <div className="mt-6 flex items-center justify-between">
                   <span className="price-tag">{s.price}</span>
-                  <button className="opacity-60 hover:opacity-100 transition-opacity" style={{ color: "var(--gold)" }} onClick={() => scrollTo("booking")}>
+                  <button
+                    className="opacity-60 hover:opacity-100 transition-opacity"
+                    style={{ color: "var(--rose)" }}
+                    onClick={() => scrollTo("booking")}
+                  >
                     <Icon name="ArrowRight" size={16} />
                   </button>
                 </div>
@@ -92,19 +174,24 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
         <Section>
           <div className="text-center mb-12">
             <SectionLabel>Галерея работ</SectionLabel>
-            <h2 className="font-display text-5xl md:text-6xl font-light mb-8" style={{ letterSpacing: "-0.02em" }}>
-              До & после<br /><em className="italic" style={{ color: "var(--gold)" }}>трансформации</em>
+            <h2 className="font-display text-5xl md:text-6xl font-light mb-8" style={{ letterSpacing: "-0.02em", color: "var(--ink)" }}>
+              До & после<br />
+              <em className="italic" style={{ color: "var(--rose)" }}>трансформации</em>
             </h2>
             <div className="flex flex-wrap gap-2 justify-center">
               {galleryCategories.map(cat => (
-                <button key={cat}
+                <button
+                  key={cat}
                   className="font-body text-xs tracking-[0.15em] uppercase px-5 py-2 border transition-all duration-200"
                   style={{
-                    borderColor: activeGalleryFilter === cat ? "var(--gold)" : "rgba(255,255,255,0.1)",
-                    color: activeGalleryFilter === cat ? "var(--gold)" : "rgba(237,232,223,0.5)",
-                    background: activeGalleryFilter === cat ? "rgba(201,168,76,0.1)" : "transparent"
+                    borderColor: activeGalleryFilter === cat ? "var(--rose)" : "rgba(44,36,32,0.15)",
+                    color: activeGalleryFilter === cat ? "var(--rose)" : "var(--ink-muted)",
+                    background: activeGalleryFilter === cat ? "var(--rose-pale)" : "transparent",
                   }}
-                  onClick={() => setActiveGalleryFilter(cat)}>{cat}</button>
+                  onClick={() => setActiveGalleryFilter(cat)}
+                >
+                  {cat}
+                </button>
               ))}
             </div>
           </div>
@@ -119,7 +206,7 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
                     <span className="font-display italic">{item.label}</span>
                   </div>
                   <div className="before-after-label right-4">
-                    <span className="text-xs tracking-widest uppercase" style={{ color: "var(--gold-light)" }}>{item.category}</span>
+                    <span className="text-xs tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.8)" }}>{item.category}</span>
                   </div>
                 </div>
               </div>

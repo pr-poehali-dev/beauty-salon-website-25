@@ -9,7 +9,7 @@ const scrollTo = (id: string) => {
 
 export default function Index() {
   return (
-    <div className="grain-overlay min-h-screen" style={{ background: "var(--dark)", color: "#EDE8DF" }}>
+    <div className="grain-overlay min-h-screen" style={{ background: "var(--cream)", color: "var(--ink)" }}>
       <NavBar scrollTo={scrollTo} />
       <HeroServices scrollTo={scrollTo} />
       <AboutReviewsPromos scrollTo={scrollTo} />
