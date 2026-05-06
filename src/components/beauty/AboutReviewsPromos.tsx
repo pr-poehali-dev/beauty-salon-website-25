@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
-import { Section, SectionLabel, SVETLANA_PHOTO, reviews, promos } from "./SectionPrimitives";
+import { Section, SectionLabel, reviews, promos } from "./SectionPrimitives";
 
 interface AboutReviewsPromosProps {
   scrollTo: (id: string) => void;
@@ -11,52 +11,13 @@ export default function AboutReviewsPromos({ scrollTo }: AboutReviewsPromosProps
 
   return (
     <>
-      {/* ABOUT */}
-      <section id="about" className="py-28 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <Section>
-            <div className="relative">
-              <img src={SVETLANA_PHOTO} alt="Климова Светлана" className="w-full object-cover" style={{ aspectRatio: "3/4", objectPosition: "top", filter: "saturate(0.92)" }} />
-              <div className="absolute -bottom-6 -right-6 p-8 w-52"
-                style={{ background: "#fff", border: "1px solid rgba(155,91,110,0.18)", boxShadow: "0 8px 32px rgba(44,36,32,0.08)" }}>
-                <div className="font-display text-5xl font-light" style={{ color: "var(--rose)" }}>20+</div>
-                <div className="font-body text-xs tracking-widest uppercase mt-1" style={{ color: "var(--ink-muted)" }}>лет опыта</div>
-              </div>
-            </div>
-          </Section>
-          <Section>
-            <SectionLabel>Обо мне</SectionLabel>
-            <h2 className="font-display text-5xl font-light mb-6" style={{ letterSpacing: "-0.02em", color: "var(--ink)" }}>
-              Климова Светлана —<br /><em className="italic" style={{ color: "var(--rose)" }}>косметолог</em>
-            </h2>
-            <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "var(--ink-muted)" }}>
-              Я верю, что каждая женщина прекрасна. Моя задача — не изменить вас, а раскрыть вашу индивидуальность. За более чем 20 лет практики я помогла более тысячи клиенток обрести уверенность в себе и полюбить своё отражение.
-            </p>
-            <p className="font-body text-sm leading-relaxed mb-10" style={{ color: "var(--ink-muted)" }}>
-              Все процедуры выполняю лично — от консультации до финального результата. Использую только сертифицированные материалы класса премиум и постоянно повышаю квалификацию.
-            </p>
-            <div className="grid grid-cols-2 gap-4 mb-10">
-              {[["Международные сертификаты", "5+"], ["Довольных клиентов", "1000+"], ["Повторных визитов", "94%"], ["Работ в портфолио", "500+"]].map(([label, val]) => (
-                <div key={label} className="cert-card">
-                  <div className="font-display text-3xl font-light" style={{ color: "var(--rose)" }}>{val}</div>
-                  <div className="font-body text-xs leading-snug mt-1" style={{ color: "var(--ink-muted)" }}>{label}</div>
-                </div>
-              ))}
-            </div>
-            <button className="btn-gold" onClick={() => scrollTo("booking")}>Записаться ко мне</button>
-          </Section>
-        </div>
-      </section>
-
-      <div className="divider-gold mx-6" />
-
       {/* REVIEWS */}
       <section id="reviews" className="py-28 px-6 max-w-7xl mx-auto">
         <Section>
           <div className="text-center mb-16">
             <SectionLabel>Отзывы</SectionLabel>
             <h2 className="font-display text-5xl md:text-6xl font-light" style={{ letterSpacing: "-0.02em", color: "var(--ink)" }}>
-              Что говорят<br /><em className="italic" style={{ color: "var(--rose)" }}>наши клиенты</em>
+              Что говорят<br /><em className="italic" style={{ color: "var(--rose)" }}>мои клиенты</em>
             </h2>
           </div>
         </Section>
