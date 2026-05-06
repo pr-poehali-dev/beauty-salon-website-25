@@ -13,8 +13,13 @@ export const gallery = [
   { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/744c2038-6ad8-458c-aaa4-60d2c291c914.jpg", label: "Перманентный макияж стрелок", category: "Перманентный макияж" },
   { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/76506788-ecb5-444a-bcea-aa1ec0c417c5.jpg", label: "Перманентный макияж губ", category: "Перманентный макияж" },
   { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/63fe3c1f-9f63-453e-8722-dc5b21c27344.jpg", label: "Перманентный макияж губ", category: "Перманентный макияж" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/fadff947-5be7-411a-9408-2d025aff99a5.jpg", label: "Перманентный макияж бровей", category: "Перманентный макияж" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/01d1b0c7-84c0-4586-9ba7-adfe90bdc9a9.jpg", label: "Процесс нанесения", category: "Перманентный макияж" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/1814d722-aa23-4a93-8aa3-995f438d8178.jpg", label: "Перманентный макияж бровей", category: "Перманентный макияж" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/8eb87f28-0779-4429-861a-305273002a26.jpg", label: "Перманентный макияж бровей", category: "Перманентный макияж" },
   { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/40ba8639-223d-4cbd-a0bb-1ba82710f67b.jpg", label: "До и после", category: "Косметология" },
   { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/74ac9098-1cdb-4905-859e-2c174bf780ec.jpg", label: "До и после", category: "Косметология" },
+  { img: "https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/22a55840-16a8-41d3-b6b7-d7e6c8ffa412.JPG", label: "Консультация", category: "Косметология" },
 ];
 
 export const reviews = [
