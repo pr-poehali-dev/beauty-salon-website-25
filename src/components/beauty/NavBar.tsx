@@ -44,21 +44,14 @@ export default function NavBar({ scrollTo }: NavBarProps) {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <div
-          className="cursor-pointer flex flex-col leading-tight"
+          className="cursor-pointer"
           onClick={() => handleScrollTo("hero")}
         >
-          <span
-            className="font-display font-light"
-            style={{ fontSize: "1.15rem", letterSpacing: "0.04em", color: "var(--ink)" }}
-          >
-            Студия Штриха
-          </span>
-          <span
-            className="font-body font-medium"
-            style={{ fontSize: "0.62rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--rose)" }}
-          >
-            Климовой Светланы
-          </span>
+          <img
+            src="https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/5361531c-26fb-44e3-a483-122c3ba4b5ad.jpg"
+            alt="Klimova Svetlana"
+            style={{ height: navScrolled ? "52px" : "64px", width: "auto", transition: "height 0.3s ease", objectFit: "contain" }}
+          />
         </div>
 
         {/* Desktop links */}

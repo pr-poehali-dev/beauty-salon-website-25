@@ -182,14 +182,11 @@ export default function BookingContactsFooter({ scrollTo }: BookingContactsFoote
       {/* FOOTER */}
       <footer className="py-12 px-6" style={{ background: "var(--cream-2)", borderTop: "1px solid rgba(155,91,110,0.12)" }}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex flex-col leading-tight">
-            <span className="font-display font-light" style={{ fontSize: "1.1rem", color: "var(--ink)", letterSpacing: "0.04em" }}>
-              Студия Штриха
-            </span>
-            <span className="font-body font-medium" style={{ fontSize: "0.6rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--rose)" }}>
-              Климовой Светланы
-            </span>
-          </div>
+          <img
+            src="https://cdn.poehali.dev/projects/5666d866-7f12-4a6c-ac08-31f894405d7d/bucket/5361531c-26fb-44e3-a483-122c3ba4b5ad.jpg"
+            alt="Klimova Svetlana"
+            style={{ height: "56px", width: "auto", objectFit: "contain" }}
+          />
           <div className="font-body text-xs tracking-wider" style={{ color: "var(--ink-muted)", opacity: 0.5 }}>© 2026 Студия Штриха. Все права защищены.</div>
           <div className="font-body text-xs tracking-wider" style={{ color: "var(--rose-light)" }}>Премиальная бьюти-студия</div>
         </div>
