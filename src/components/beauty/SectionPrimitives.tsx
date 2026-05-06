@@ -51,7 +51,7 @@ export const slots: Record<string, string[]> = {
 };
 
 export const specialists = [
-  { name: "Алина Соколова", role: "Визажист, перманентный макияж", exp: "8 лет опыта", certs: ["LUXVISAGE Academy", "International PMU Certificate", "Dermalogica Pro"] },
+  { name: "Климова Светлана", role: "Визажист, перманентный макияж", exp: "8 лет опыта", certs: ["LUXVISAGE Academy", "International PMU Certificate", "Dermalogica Pro"] },
   { name: "Марина Белова", role: "Мастер по уходу за кожей", exp: "6 лет опыта", certs: ["Germaine de Capuccini", "Gigi Skincare Pro", "AHA/BHA Peel Specialist"] },
 ];
 

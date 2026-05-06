@@ -27,7 +27,7 @@ export default function AboutReviewsPromos({ scrollTo }: AboutReviewsPromosProps
           <Section>
             <SectionLabel>Обо мне</SectionLabel>
             <h2 className="font-display text-5xl font-light mb-6" style={{ letterSpacing: "-0.02em", color: "var(--ink)" }}>
-              Алина Соколова —<br /><em className="italic" style={{ color: "var(--rose)" }}>мастер своего дела</em>
+              Климова Светлана —<br /><em className="italic" style={{ color: "var(--rose)" }}>мастер своего дела</em>
             </h2>
             <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "var(--ink-muted)" }}>
               Я верю, что каждая женщина прекрасна. Моя задача — не изменить вас, а раскрыть вашу индивидуальность. За 8 лет работы я помогла более чем 200 клиентам обрести уверенность в себе.
@@ -43,7 +43,7 @@ export default function AboutReviewsPromos({ scrollTo }: AboutReviewsPromosProps
                 </div>
               ))}
             </div>
-            <button className="btn-gold" onClick={() => scrollTo("booking")}>Записаться к Алине</button>
+            <button className="btn-gold" onClick={() => scrollTo("booking")}>Записаться к Светлане</button>
           </Section>
         </div>
 

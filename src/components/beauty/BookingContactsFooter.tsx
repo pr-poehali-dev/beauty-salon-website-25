@@ -147,7 +147,7 @@ export default function BookingContactsFooter({ scrollTo }: BookingContactsFoote
           {[
             { icon: "MapPin", title: "Адрес", lines: ["Москва, ул. Большая Никитская, 12", "м. Арбатская, 3 мин пешком"] },
             { icon: "Clock", title: "Часы работы", lines: ["Пн–Пт: 10:00 – 21:00", "Сб–Вс: 11:00 – 19:00"] },
-            { icon: "Phone", title: "Связь", lines: ["+7 (999) 123-45-67", "info@noirbeauty.ru"] },
+            { icon: "Phone", title: "Связь", lines: ["+7 (999) 123-45-67", "info@studiya-shtrikha.ru"] },
           ].map((c, i) => (
             <Section key={i}>
               <div className="cert-card text-center">
