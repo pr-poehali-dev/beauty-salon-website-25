@@ -145,9 +145,9 @@ export default function BookingContactsFooter({ scrollTo }: BookingContactsFoote
         </Section>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { icon: "MapPin", title: "Адрес", lines: ["Москва, ул. Большая Никитская, 12", "м. Арбатская, 3 мин пешком"] },
-            { icon: "Clock", title: "Часы работы", lines: ["Пн–Пт: 10:00 – 21:00", "Сб–Вс: 11:00 – 19:00"] },
-            { icon: "Phone", title: "Связь", lines: ["+7 (999) 123-45-67", "info@studiya-shtrikha.ru"] },
+            { icon: "MapPin", title: "Адрес", lines: ["МО, г. Видное", "пр-т Ленинского Комсомола, 9/3", "ТЦ МАК"] },
+            { icon: "Clock", title: "Часы работы", lines: ["Пн–Пт: 10:00 – 20:00", "Сб–Вс: 10:00 – 18:00"] },
+            { icon: "Phone", title: "Телефон", lines: ["+7 (966) 190-37-71"] },
           ].map((c, i) => (
             <Section key={i}>
               <div className="cert-card text-center">
@@ -164,17 +164,23 @@ export default function BookingContactsFooter({ scrollTo }: BookingContactsFoote
           ))}
         </div>
         <Section>
-          <div className="flex justify-center gap-4 mt-16">
-            {[{ icon: "Instagram", label: "Instagram" }, { icon: "MessageCircle", label: "Telegram" }, { icon: "Youtube", label: "YouTube" }].map(({ icon, label }) => (
-              <button key={label}
-                className="flex items-center gap-2 font-body text-xs tracking-[0.2em] uppercase px-6 py-3 transition-all duration-200"
-                style={{ border: "1px solid rgba(155,91,110,0.2)", color: "var(--ink-2)" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "var(--rose)"; (e.currentTarget as HTMLElement).style.color = "var(--rose)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(155,91,110,0.2)"; (e.currentTarget as HTMLElement).style.color = "var(--ink-2)"; }}>
-                <Icon name={icon} size={14} style={{ color: "var(--rose)" }} />
-                {label}
-              </button>
-            ))}
+          <div className="flex flex-wrap justify-center gap-4 mt-16">
+            <a href="https://vk.com/sveta_pm_vidnoe" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 font-body text-xs tracking-[0.2em] uppercase px-6 py-3 transition-all duration-200"
+              style={{ border: "1px solid rgba(155,91,110,0.2)", color: "var(--ink-2)", textDecoration: "none" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "var(--rose)"; (e.currentTarget as HTMLElement).style.color = "var(--rose)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(155,91,110,0.2)"; (e.currentTarget as HTMLElement).style.color = "var(--ink-2)"; }}>
+              <Icon name="Users" size={14} style={{ color: "var(--rose)" }} />
+              ВКонтакте
+            </a>
+            <a href="tel:+79661903771"
+              className="flex items-center gap-2 font-body text-xs tracking-[0.2em] uppercase px-6 py-3 transition-all duration-200"
+              style={{ border: "1px solid rgba(155,91,110,0.2)", color: "var(--ink-2)", textDecoration: "none" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "var(--rose)"; (e.currentTarget as HTMLElement).style.color = "var(--rose)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(155,91,110,0.2)"; (e.currentTarget as HTMLElement).style.color = "var(--ink-2)"; }}>
+              <Icon name="Phone" size={14} style={{ color: "var(--rose)" }} />
+              Позвонить
+            </a>
           </div>
         </Section>
       </section>
