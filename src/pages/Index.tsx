@@ -2,6 +2,7 @@ import NavBar from "@/components/beauty/NavBar";
 import HeroServices from "@/components/beauty/HeroServices";
 import AboutReviewsPromos from "@/components/beauty/AboutReviewsPromos";
 import BookingContactsFooter from "@/components/beauty/BookingContactsFooter";
+import FloatingContact from "@/components/beauty/FloatingContact";
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -14,6 +15,7 @@ export default function Index() {
       <HeroServices scrollTo={scrollTo} />
       <AboutReviewsPromos scrollTo={scrollTo} />
       <BookingContactsFooter scrollTo={scrollTo} />
+      <FloatingContact />
     </div>
   );
 }
