@@ -60,6 +60,33 @@ export default function HeroServices({ scrollTo }: HeroServicesProps) {
               <button className="btn-outline-gold" onClick={() => scrollTo("portfolio")}>Смотреть работы</button>
             </div>
 
+            <div className="flex flex-wrap gap-3 mt-5 animate-fade-in" style={{ animationDelay: "0.65s" }}>
+              <a href="tel:+79661903771"
+                className="flex items-center gap-2 font-body text-xs tracking-wider uppercase px-5 py-3 transition-all duration-200"
+                style={{ border: "1px solid rgba(155,91,110,0.3)", color: "var(--rose)", textDecoration: "none", borderRadius: "2px" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "var(--rose-pale)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}>
+                <Icon name="Phone" size={13} style={{ color: "var(--rose)" }} />
+                Позвонить
+              </a>
+              <a href="https://t.me/+79661903771" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 font-body text-xs tracking-wider uppercase px-5 py-3 transition-all duration-200"
+                style={{ border: "1px solid rgba(155,91,110,0.3)", color: "var(--rose)", textDecoration: "none", borderRadius: "2px" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "var(--rose-pale)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}>
+                <Icon name="Send" size={13} style={{ color: "var(--rose)" }} />
+                Telegram
+              </a>
+              <a href="https://vk.com/sveta_pm_vidnoe" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 font-body text-xs tracking-wider uppercase px-5 py-3 transition-all duration-200"
+                style={{ border: "1px solid rgba(155,91,110,0.3)", color: "var(--rose)", textDecoration: "none", borderRadius: "2px" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "var(--rose-pale)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}>
+                <Icon name="Users" size={13} style={{ color: "var(--rose)" }} />
+                ВКонтакте
+              </a>
+            </div>
+
             {/* Stats */}
             <div className="flex items-center gap-10 mt-14 animate-fade-in" style={{ animationDelay: "0.7s" }}>
               {[["1000+", "Клиентов"], ["20+", "Лет опыта"], ["5.0", "Рейтинг"]].map(([num, label]) => (
